@@ -20,6 +20,7 @@ public class ShapeTester {
 
       boolean loopB = true;
       int shape = -1;
+      System.out.println("Welcome to the Volume and Surface Area Calculator for Spheres, Boxes, and Pyramids");
         while (loopB) {
           System.out.println("What shape? (Sphere, Cube, Pyramid)");
           input = scanner.nextLine();
