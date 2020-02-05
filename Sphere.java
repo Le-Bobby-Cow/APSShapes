@@ -1,14 +1,18 @@
 public class Sphere {
 
-  private float radius;
+  private float radius = 0;
 
-  Sphere(float radius) {
+  Sphere(/*float radius*/) {
+    /*this.radius = radius;*/
+  }
+
+  public void set (float radius) {
     this.radius = radius;
   }
 
   public float volume() {
     float volume;
-    double intermediate = (4/3)*Math.PI*(Math.pow(radius, 3));
+    double intermediate = (4 * Math.PI * (Math.pow(radius, 3))) / 3;
     volume = (float) intermediate;
     return volume;
   }

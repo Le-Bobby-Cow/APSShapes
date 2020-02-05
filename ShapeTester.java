@@ -5,10 +5,16 @@ public class ShapeTester {
   public static void main(String[] args) {
 
     Scanner scanner = new Scanner(System.in);
+
+    Sphere s1 = new Sphere();
+    Box b1 = new Box();
+    Pyramid p1 = new Pyramid();
+
     boolean loopA = true;
     String input;
 
     while (loopA) {
+
       boolean loopB = true;
       int shape = -1;
         while (loopB) {
@@ -42,15 +48,17 @@ public class ShapeTester {
             radius = Float.parseFloat(input);
             loopC = false;
           } catch(NumberFormatException e){
+            System.out.println("Not a number, try again");
             loopC = true;
           }
         }
-        Sphere s1 = new Sphere(radius);
-        System.out.println("The volume of a Sphere with a radius of " + radius + " is " + s1.volume());
-        System.out.println("The surface area of a Sphere with a radius of " + radius + " is " + s1.surfaceArea());
+        s1.set(radius);
+        System.out.println("The volume of a Sphere with a radius of \n \t" + radius + "\nis \n \t" + s1.volume() + "\n");
+        System.out.println("The surface area of a Sphere with a radius of \n \t" + radius + "\nis \n \t" + s1.surfaceArea() + "\n");
 
 
       } else if (shape == 1) {
+
         loopC = true;
         while (loopC) {
           System.out.println("What is the length \'l\' of the Cube?");
@@ -59,6 +67,7 @@ public class ShapeTester {
             length = Float.parseFloat(input);
             loopC = false;
           } catch(NumberFormatException e){
+            System.out.println("Not a number, try again");
             loopC = true;
           }
         }
@@ -70,6 +79,7 @@ public class ShapeTester {
             width = Float.parseFloat(input);
             loopC = false;
           } catch(NumberFormatException e){
+            System.out.println("Not a number, try again");
             loopC = true;
           }
         }
@@ -81,12 +91,13 @@ public class ShapeTester {
             height = Float.parseFloat(input);
             loopC = false;
           } catch(NumberFormatException e){
+            System.out.println("Not a number, try again");
             loopC = true;
           }
         }
-        Box b1 = new Box(length, width, height);
-        System.out.println("The volume of a Cube with a length of " + length + " and a width of " + width + " and a height of " + height + " is " + b1.volume());
-        System.out.println("The surface area of a Cube with a length of " + length + " and a width of " + width + " and a height of " + height + " is " + b1.surfaceArea());
+        b1.set(length, width, height);
+        System.out.println("The volume of a Cube with a length of \n \t" + length + "\nand a width of \n \t" + width + "\nand a height of \n \t" + height + "\nis \n \t" + b1.volume() + "\n");
+        System.out.println("The surface area of a Cube with a length of \n \t" + length + "\nand a width of \n \t" + width + "\nand a height of \n \t" + height + "\nis \n \t" + b1.surfaceArea() + "\n");
 
 
       } else if (shape == 2) {
@@ -98,6 +109,7 @@ public class ShapeTester {
             length = Float.parseFloat(input);
             loopC = false;
           } catch(NumberFormatException e){
+            System.out.println("Not a number, try again");
             loopC = true;
           }
         }
@@ -109,6 +121,7 @@ public class ShapeTester {
             width = Float.parseFloat(input);
             loopC = false;
           } catch(NumberFormatException e){
+            System.out.println("Not a number, try again");
             loopC = true;
           }
         }
@@ -120,12 +133,13 @@ public class ShapeTester {
             height = Float.parseFloat(input);
             loopC = false;
           } catch(NumberFormatException e){
+            System.out.println("Not a number, try again");
             loopC = true;
           }
         }
-        Pyramid p1 = new Pyramid(length, width, height);
-        System.out.println("The volume of a Pyramid with a length of " + length + " and a width of " + width + " and a height of " + height + " is " + p1.volume());
-        System.out.println("The surface area of a Pyramid with a length of " + length + " and a width of " + width + " and a height of " + height + " is " + p1.surfaceArea());
+        p1.set(length, width, height);
+        System.out.println("The volume of a Pyramid with a length of \n \t" + length + "\nand a width of \n \t" + width + "\nand a height of \n \t" + height + "\nis \n \t" + p1.volume() + "\n");
+        System.out.println("The surface area of a Pyramid with a length of \n \t" + length + "\nand a width of \n \t" + width + "\nand a height of \n \t" + height + "\nis \n \t" + p1.surfaceArea() + "\n");
 
       }
 

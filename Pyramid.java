@@ -1,8 +1,14 @@
 public class Pyramid {
 
-  private float length, width, height;
+  private float length, width, height = 0;
 
-  Pyramid(float length, float width, float height) {
+  Pyramid(/*float length, float width, float height*/) {
+    /*this.length = length;
+    this.width = width;
+    this.height = height;*/
+  }
+
+  public void set (float length, float width, float height) {
     this.length = length;
     this.width = width;
     this.height = height;
